@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+a,
+span {
+  display: inline-block;
+}
+
 .nav {
   @apply flex items-center justify-start fixed top-0 left-0 w-full h-screen overflow-auto transform translate-x-[-81.25rem] transition-transform duration-700 ease-in-out lg:translate-x-0 lg:overflow-visible lg:relative lg:justify-start lg:h-full;
 }
