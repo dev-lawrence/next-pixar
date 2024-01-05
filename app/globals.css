@@ -2,26 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.nav {
+  @apply flex items-center justify-start fixed top-0 left-0 w-full h-screen overflow-auto transform translate-x-[-81.25rem] transition-transform duration-700 ease-in-out lg:translate-x-0 lg:overflow-visible lg:relative lg:justify-start lg:h-full;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.menu {
+  @apply bg-white h-screen w-[90%] pt-[2rem] px-8 pb-[1.625rem] lg:h-full lg:w-full lg:flex lg:items-center lg:justify-end lg:py-1 lg:px-0;
+}
+
+.nav.showMenu {
+  transform: translateX(0);
+}
+
+.menu-short,
+.menu-tech,
+.menu-careers,
+.menu-extra,
+.menu-about {
+  position: absolute;
+  width: 300px;
+  background-color: #1d1d1d;
+  padding: 1rem 0;
+  padding-right: 1.5rem;
+
+  li:not(:last-child) {
+    margin-bottom: 0.3rem;
+  }
+
+  a {
+    color: white;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  &.clicked {
+    display: none;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.menu-about {
+  right: -9rem;
 }
