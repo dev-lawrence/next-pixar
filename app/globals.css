@@ -59,3 +59,13 @@ span {
   background-position: center center;
   background-repeat: no-repeat;
 }
+
+.careers .bg-img {
+  /* position: relative;
+  min-height: 60vh; */
+  background: url(../public/careers.jpg);
+  /* background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%; */
+}

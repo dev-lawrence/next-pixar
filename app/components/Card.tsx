@@ -15,7 +15,7 @@ const Card = ({ path, target, CardImg, text }: CardProps) => {
         <Link className="mb-6" href={path} target={target}>
           <Image
             src={CardImg}
-            alt=""
+            alt={text}
             className="md:w-[304px] md:h-[203px] md:object-cover"
           />
         </Link>
