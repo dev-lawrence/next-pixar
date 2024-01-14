@@ -5,12 +5,14 @@ import Hero from '../components/Hero';
 const Careers = () => {
   return (
     <>
-      <section className="careers relative">
+      <section className="relative">
         <Hero text="careers at pixar" />
 
-        <div className="collaboration">
-          <h2>a collaboration between art & technology</h2>
-          <p>
+        <div className="p-16 max-w-[800px] mx-auto px-8 text-center">
+          <h2 className="text-[1.75rem] uppercase leading-[1.3] text-[#1d1d1d] mb-[1.438rem] md:text-[2.438rem]">
+            a collaboration between art & technology
+          </h2>
+          <p className="text-[1.1rem] leading-[2] text-[#1D1D1D] mb-8 md:text-[1.25rem]">
             At Pixar, our goal is to make great films with great people. We are
             proud of our tradition of creative and technical excellence and are
             always looking for talented people to enrich our work and our
@@ -21,7 +23,10 @@ const Careers = () => {
 
           <hr />
 
-          <a href="#" className="btn">
+          <a
+            href="#"
+            className="uppercase border-2 border-[#1d1d1d] bg-transparent text-[#1d1d1d] my-8 py-4 px-[2.125rem]  tracking-[2px] font-medium rounded-md transition duration-200 ease-in hover:bg-[#1d1d1d] hover:text-white"
+          >
             visit career listings
           </a>
 
